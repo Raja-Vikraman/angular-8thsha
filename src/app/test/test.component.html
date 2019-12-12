@@ -1,5 +1,11 @@
-<p>
-test works!
+
+<h2 [class.text-success]="hasError"> test works! </h2>
+
+<h2 [ngClass]="messageClass"> test works! dir </h2>
+
+<h2 [style.color]="'orange'"> test works! style binding </h2>
+<h2 [style.color]="hasError ? 'blue': 'red'"> test works! style binding conditional </h2>
+<h2 [ngStyle]="titleStyles"> test works! dir </h2>
+
 <input [disabled]="isDisabled" [type]="texType" value={{texVal}}/> <br>
 <input bind-disabled="isDisabled" [type]="texType" value={{texVal}}/>
-</p>

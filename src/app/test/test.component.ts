@@ -10,6 +10,17 @@ export class TestComponent implements OnInit {
   public texVal="123";
   public texType="text";
   public isDisabled=true;
+  public hasError = true;
+  public isSpecial = true;
+  public messageClass = {
+    "text-success" : !this.hasError,
+    "text-danger": this.hasError,
+    "text-special": this.hasError
+  }
+
+  public titleStyles = {
+    fontStyle:'italic'
+  }
   constructor() { }
 
   ngOnInit() {
