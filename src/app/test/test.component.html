@@ -14,3 +14,7 @@
 
 <button (click)="onClick($event)"> click me </button> {{greeting}}
 <button (click)="greet='inline in click'"> click me </button> {{greet}}
+
+<h1> template reference </h1>
+<input #ip type="text" value="vishwas"/>
+<button (click)="logMessage(ip.value)"> template ref</button>

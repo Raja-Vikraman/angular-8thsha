@@ -28,6 +28,10 @@ export class TestComponent implements OnInit {
     console.log(event.type);
   }
 
+  logMessage(i) {
+    alert(i);
+  }
+
   ngOnInit() {
   }
 
