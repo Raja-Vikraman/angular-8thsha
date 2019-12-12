@@ -23,6 +23,10 @@ export class TestComponent implements OnInit {
   }
   constructor() { }
 
+  onClick() {
+    this.greeting= "you hav just clicked me";
+  }
+
   ngOnInit() {
   }
 

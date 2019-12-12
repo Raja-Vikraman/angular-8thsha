@@ -9,3 +9,8 @@
 
 <input [disabled]="isDisabled" [type]="texType" value={{texVal}}/> <br>
 <input bind-disabled="isDisabled" [type]="texType" value={{texVal}}/>
+
+<h1> Event Binding </h1>
+
+<button (click)="onClick()"> click me </button> {{greeting}}
+<button (click)="greet='inline in click'"> click me </button> {{greet}}
