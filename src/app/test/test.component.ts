@@ -23,8 +23,9 @@ export class TestComponent implements OnInit {
   }
   constructor() { }
 
-  onClick() {
+  onClick(event) {
     this.greeting= "you hav just clicked me";
+    console.log(event.type);
   }
 
   ngOnInit() {
