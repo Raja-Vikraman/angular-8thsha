@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -17,6 +17,14 @@ export class TestComponent implements OnInit {
     "text-danger": this.hasError,
     "text-special": this.hasError
   }
+
+  public name ="";
+  public displayName = false;
+  public color="blue";
+
+  public colors = ["red", "blue", "green"];
+
+  @Input() public parentData;
 
   public titleStyles = {
     fontStyle:'italic'
