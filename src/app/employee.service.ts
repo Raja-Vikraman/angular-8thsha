@@ -6,7 +6,7 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 export class EmployeeService {
 
-  private _url: string = 'http://test-tr.grouprm.net/employee.json'; //http://test-tr.grouprm.net/employee.json  ./employees.json
+  private _url: string = './employees.json';//  ./employees.json
   constructor(private http: HttpClient) { }
 
   getEmployee() {
