@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {EmployeeService} from '../employee.service';
+
 
 @Component({
   selector: 'app-test',
@@ -23,13 +25,20 @@ export class TestComponent implements OnInit {
   public color="blue";
 
   public colors = ["red", "blue", "green"];
+  public employees = [];
 
-  @Input() public parentData;
+  @Input('parentData') public parentDataAlias;
+  @Output() public childEvent = new EventEmitter();
+
+  fireEvent(){
+    this.childEvent.emit('Hey code evolution');
+  }
 
   public titleStyles = {
     fontStyle:'italic'
   }
-  constructor() { }
+  //constructor() { }
+  constructor(private _employeeService: EmployeeService) {}
 
   onClick(event) {
     this.greeting= "you hav just clicked me";
@@ -40,7 +49,14 @@ export class TestComponent implements OnInit {
     alert(i);
   }
 
+  // ngOnInit() {
+  // }
+
   ngOnInit() {
+    this.employees = this._employeeService.getEmployee();
+    console.log(this.employees);
   }
+
+  
 
 }

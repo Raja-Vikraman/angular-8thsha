@@ -56,4 +56,11 @@ ngModel is in  { FormsModule } from '@angular/forms'
 </div>
 
 <h1> component interaction </h1>
-name <b> {{parentData}} </b> is imported from parent app-component
+<h2> component interaction from parent to child </h2>
+name <b> {{parentDataAlias}} </b> is imported from parent app-component
+
+<h2> component interaction from child to parent </h2>
+<button (click)="fireEvent()"> send event </button>
+
+<h1> Dependency Injection</h1>
+ {{employees | json}}

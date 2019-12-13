@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'firebase';
+  public mesaage = '';
+
+  constructor() {}
+
+  ngOnInit() {
+   
+  }
+
 }

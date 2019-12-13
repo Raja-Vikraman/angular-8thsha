@@ -1,8 +1,8 @@
-<hello name="{{ name }}"></hello>
+<hello name="{{ name }} {{message | uppercase}}"></hello>
 <p>
   Start editing to see some magic happen :)
 </p>
-<app-test [parentData]="name">
+<app-test (childEvent)="message=$event" [parentData]="name">
   </app-test>
   
    
