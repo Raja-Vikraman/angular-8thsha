@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { TestComponent } from './test/test.component';
 import { EmployeeService } from './employee.service';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule ],
   declarations: [ AppComponent, HelloComponent, TestComponent ],
   bootstrap:    [ AppComponent ],
   providers: [EmployeeService]

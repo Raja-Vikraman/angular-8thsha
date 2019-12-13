@@ -26,6 +26,7 @@ export class TestComponent implements OnInit {
 
   public colors = ["red", "blue", "green"];
   public employees = [];
+  public employeesHttp = [];
 
   @Input('parentData') public parentDataAlias;
   @Output() public childEvent = new EventEmitter();
@@ -54,6 +55,7 @@ export class TestComponent implements OnInit {
 
   ngOnInit() {
     this.employees = this._employeeService.getEmployee();
+    this._employeeService.getEmployees().subscribe(data => this.employeesHttp = data);
     console.log(this.employees);
   }
 
